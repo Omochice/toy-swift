@@ -1,7 +1,7 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   extends: ["github>Omochice/renovate-config"],
-  customManager: [
+  customManagers: [
     // refs:
     // https://speakerdeck.com/ikesyo/renovateniyoruiosraiburarifalsezi-dong-geng-xin?slide=19
     // https://github.com/hatena/renovate-config/blob/main/xcodegenSwiftPackages.json5
