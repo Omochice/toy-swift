@@ -88,3 +88,19 @@ iOSInjectionProject/
 # End of https://www.toptal.com/developers/gitignore/api/swift
 
 .task
+
+# Created by https://www.toptal.com/developers/gitignore/api/xcode
+# Edit at https://www.toptal.com/developers/gitignore?templates=xcode
+
+### Xcode ###
+## User settings
+xcuserdata/
+
+## Xcode 8 and earlier
+*.xcscmblueprint
+*.xccheckout
+
+### Xcode Patch ###
+*.xcodeproj/*
+
+# End of https://www.toptal.com/developers/gitignore/api/xcode
