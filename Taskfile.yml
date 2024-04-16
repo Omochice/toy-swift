@@ -4,13 +4,15 @@ version: "3"
 tasks:
   build:
     sources:
-      - main.swift
+      - Sources/**/*.swift
     generates:
-      - main
+      - .build
     cmds:
-      - swiftc main.swift
+      - swift build
   run:
-    deps:
-      - build
     cmds:
-      - ./main
+      - swift run toy-swift
+  fmt:
+    shopt: [globstar]
+    cmds:
+      - swift-format format --in-place ./**/*.swift

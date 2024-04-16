@@ -1,12 +1,12 @@
-import Commander
+import Prism
 
-let main = command(
-  Argument<String>("greet"),
-  Option("quit", flag: "q")
-) { input, quit in
-  if !quit {
-    print("Hello, \(input)!")
+let formatted = Prism {
+  ForegroundColor(.red) {
+    "Hello, "
+  }
+  ForegroundColor(.blue) {
+    "world!"
   }
 }
 
-main.run()
+print(formatted)
