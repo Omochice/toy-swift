@@ -1,22 +1,21 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  extends: [
-    "github>Omochice/renovate-config",
+  extends: ["github>Omochice/renovate-config"],
+  customManager: [
+    // refs:
+    // https://speakerdeck.com/ikesyo/renovateniyoruiosraiburarifalsezi-dong-geng-xin?slide=19
+    // https://github.com/hatena/renovate-config/blob/main/xcodegenSwiftPackages.json5
+    {
+      customType: "regex",
+      fileMatch: [
+        "(^|\\/)project\\.ya?ml$",
+        "(^|\\/)[Xx]code[Gg]en/.+\\.ya?ml$",
+      ],
+      matchStrings: [
+        "url: https:\\/\\/github\\.com\\/(?<depName>.*?)(\\.git)?\\s*(?:[Vv]ersion|from): ['\"]?(?<currentValue>[^'\"]+?)['\"]?\\s",
+        "github: (?<depName>.*?)\\s*version: ['\"]?(?<currentValue>[^'\"]+?)['\"]?\\s",
+      ],
+      datasourceTemplate: "swift",
+    },
   ],
-  {
-    customManager: [
-      // refs:
-      // https://speakerdeck.com/ikesyo/renovateniyoruiosraiburarifalsezi-dong-geng-xin?slide=19
-      // https://github.com/hatena/renovate-config/blob/main/xcodegenSwiftPackages.json5
-      {
-        customType: "regex",
-        fileMatch: ["(^|/)project\\.ya?ml$", "(^|/)[Xx]code[Gg]en/.+\\.ya?ml$"],
-        matchStrings: [
-          "url: https:\\/\\/github\\.com\\/(?<depName>.*?)(\\.git)?\\s*(?:[Vv]ersion|from): ['\"]?(?<currentValue>[^'\"]+?)['\"]?\\s",
-          "github: (?<depName>.*?)\\s*version: ['\"]?(?<currentValue>[^'\"]+?)['\"]?\\s",
-        ],
-        datasourceTemplate: "swift",
-      },
-    ],
-  }
 }
