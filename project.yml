@@ -1,0 +1,12 @@
+$schema: https://raw.githubusercontent.com/yonaskolb/XcodeGen/6e784e280a9e654bddda285fcff28ed23822d729/Assets/json-schema/project.json
+name: toy-swift
+packages:
+  Prism:
+    url: https://github.com/jordanbaird/Prism
+    from: 1.0.0
+targets:
+  toy-swift:
+    type: tool
+    platform: auto
+    dependencies:
+      - package: Prism
