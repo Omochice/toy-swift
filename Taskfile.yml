@@ -1,0 +1,16 @@
+version: "3"
+# see: https://taskfile.dev/usage/
+
+tasks:
+  build:
+    sources:
+      - main.swift
+    generates:
+      - main
+    cmds:
+      - swiftc main.swift
+  run:
+    deps:
+      - build
+    cmds:
+      - ./main
