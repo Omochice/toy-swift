@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
   name: "toy-swift",
   dependencies: [
-    .package(url: "https://github.com/jordanbaird/Prism", from: "0.1.0"),
+    .package(url: "https://github.com/jordanbaird/Prism", from: "0.1.2"),
     .package(url: "https://github.com/jpsim/Yams", "4.0.0"..<"5.0.0"),
   ],
   targets: [
