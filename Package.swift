@@ -7,7 +7,7 @@ let package = Package(
   name: "toy-swift",
   dependencies: [
     .package(url: "https://github.com/jordanbaird/Prism", from: "0.1.0"),
-    .package(url: "https://github.com/jpsim/Yams", "4.0.0"..<"5.0.0"),
+    .package(url: "https://github.com/jpsim/Yams", "4.0.0"..<"4.0.6"),
   ],
   targets: [
     // Targets are the basic building blocks of a package, defining a module or a test suite.
