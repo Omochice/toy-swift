@@ -3,7 +3,7 @@ name: toy-swift
 packages:
   Prism:
     url: https://github.com/jordanbaird/Prism
-    from: 0.1.0
+    from: 0.1.2
 targets:
   toy-swift:
     type: tool
